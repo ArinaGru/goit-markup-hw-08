@@ -1,7 +1,7 @@
-.features-list {
-    display: flex;
-    justify-content: space-between;
-}
+// .features-list {
+//     display: flex;
+//     justify-content: space-between;
+// }
 
 .features-list__title {
     margin-top: 0;
@@ -13,6 +13,10 @@
     line-height: 1.14;
     letter-spacing: 0.03em;
     text-transform: uppercase;
+@media screen and (max-width:767px) {
+    text-align: center;
+}
+
 }
 
 .features-list__text {
@@ -24,7 +28,13 @@
 }
 
 .features-list__item {
-    width: 270px;
+max-width: 480px;
+
+@media screen and (max-width:767px) {
+        &:not(:last-child) {
+                margin-bottom: 30px;
+            }
+    }
 }
 
 

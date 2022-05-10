@@ -1,16 +1,27 @@
 .container {
-    width: 1200px;
     padding-left: 15px;
     padding-right: 15px;
     margin-right: auto;
     margin-left: auto;
 
-    &--flex {
-        display: flex;
-        align-items: center;
+    @media screen and (min-width:480px) {
+        width: 480px;
     }
 
-    &--baseline {
-        align-items: baseline;
+    @media screen and (min-width:768px) {
+            width: 768px;
+    }
+
+    @media screen and (min-width:1200px) {
+            width: 1200px;
+
+            &--flex {
+                        display: flex;
+                        align-items: center;
+                    }
+            
+            &--baseline {
+                        align-items: baseline;
+                    }
     }
 }
