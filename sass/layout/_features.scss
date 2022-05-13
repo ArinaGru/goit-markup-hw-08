@@ -1,7 +1,10 @@
-// .features-list {
-//     display: flex;
-//     justify-content: space-between;
-// }
+.features-list {
+    @include tablet {
+        display: flex;
+        flex-wrap: wrap;
+        margin: calc(-1 * var(--card-set-gap));
+    }
+}
 
 .features-list__title {
     margin-top: 0;
@@ -28,12 +31,22 @@
 }
 
 .features-list__item {
-max-width: 480px;
+    width: 100%;
 
-@media screen and (max-width:767px) {
+    @media screen and (max-width:767px) {
         &:not(:last-child) {
-                margin-bottom: 30px;
-            }
+            margin-bottom: 30px;
+        }
+    }
+
+    @include tablet {
+
+            width: calc(100% / 2 - 2 * var(--card-set-gap));
+            margin: var(--card-set-gap);
+        
+    }
+    @include desktop {
+    width: calc(100% / 4 - 2 * var(--card-set-gap));
     }
 }
 
