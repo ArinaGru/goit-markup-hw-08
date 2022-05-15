@@ -6,13 +6,6 @@
     border-bottom: 1px solid #ECECEC;
 }
 
-.header-nav {
-    display: flex;
-    align-items: center;
-    min-height: 60px;
-  @media screen and (max-width:767px) {justify-content: space-between;}
-}
-
 .header-nav__button {
     display: inline-flex;
  
@@ -151,8 +144,8 @@ display: block;
     }
 
     @include tablet {
-        padding-top: 28px;
-        padding-bottom: 28px;
+        padding-top: 32px;
+        padding-bottom: 32px;
         &--current::after {
             display: inline-block;
             position: absolute;

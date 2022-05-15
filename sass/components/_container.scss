@@ -3,6 +3,15 @@
     padding-right: 15px;
     margin-right: auto;
     margin-left: auto;
+    &--flex-header {
+            display: flex;
+            align-items: center;}
+
+    @media (max-width: 767px){
+    &--flex-header {
+            justify-content: space-between;
+            min-height: 60px;
+        }}
 
     @include mobile {
         width: 480px;
@@ -10,15 +19,19 @@
 
     @include tablet {
             width: 768px;
+            &--flex-header {
+                    min-height: 80px;
+                }
+            
     }
 
     @include desktop {
             width: 1200px;
 
             &--flex {
-                        display: flex;
-                        align-items: center;
-                    }
+                    display: flex;
+                    align-items: center;
+                }
             
             &--baseline {
                         align-items: baseline;

@@ -9,7 +9,6 @@
 
     @include tablet {
         margin-bottom: 0;
-        flex-grow: 1;
     }
 
     @include desktop {
@@ -49,20 +48,14 @@
     }
 }
 
-.footer-join {
-    margin-bottom: 60px;
-
-    @include tablet {
-        margin-bottom: 0;
-        flex-grow: 1;
-    }
-}
 
 .footer-contacts {
+    margin-bottom: 60px;
     @include tablet {
         display: flex;
         margin-bottom: 60px;
         align-items: baseline;
+        justify-content: space-around;
     }
 
     @include desktop {

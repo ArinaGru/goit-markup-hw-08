@@ -64,6 +64,24 @@ textarea {
   margin-left: auto;
 }
 
+.container--flex-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 767px) {
+  .container--flex-header {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    min-height: 60px;
+  }
+}
+
 @media screen and (min-width: 480px) {
   .container {
     width: 480px;
@@ -73,6 +91,9 @@ textarea {
 @media screen and (min-width: 768px) {
   .container {
     width: 768px;
+  }
+  .container--flex-header {
+    min-height: 80px;
   }
 }
 
@@ -617,24 +638,6 @@ textarea {
   border-bottom: 1px solid #ECECEC;
 }
 
-.header-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  min-height: 60px;
-}
-
-@media screen and (max-width: 767px) {
-  .header-nav {
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-}
-
 .header-nav__button {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -802,8 +805,8 @@ textarea {
 
 @media screen and (min-width: 768px) {
   .site-nav__link {
-    padding-top: 28px;
-    padding-bottom: 28px;
+    padding-top: 32px;
+    padding-bottom: 32px;
   }
   .site-nav__link--current::after {
     display: inline-block;
@@ -1298,9 +1301,6 @@ textarea {
 @media screen and (min-width: 768px) {
   .footer-thumb {
     margin-bottom: 0;
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
   }
 }
 
@@ -1344,17 +1344,8 @@ textarea {
   letter-spacing: 0.03em;
 }
 
-.footer-join {
+.footer-contacts {
   margin-bottom: 60px;
-}
-
-@media screen and (min-width: 768px) {
-  .footer-join {
-    margin-bottom: 0;
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
-  }
 }
 
 @media screen and (min-width: 768px) {
@@ -1366,6 +1357,8 @@ textarea {
     -webkit-box-align: baseline;
         -ms-flex-align: baseline;
             align-items: baseline;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
 }
 
